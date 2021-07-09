@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.3 (Python 3.9.6 on win32)" generated="20210709 11:39:07.003" rpa="false" schemaversion="2">
+<suite id="s1" name="Verify Invalid Credentials Tests" source="C:\Users\chamundeswarik\PycharmProjects\OpeEMRProject\LoginSuite\verify_invalid_credentials_tests.robot">
+<test id="s1-t1" name="TC1">
+<status status="FAIL" starttime="20210709 11:39:07.213" endtime="20210709 11:39:07.214">Test case contains no keywords.</status>
+</test>
+<test id="s1-t2" name="Verify Valid Credentials Tests">
+<kw name="Launch Browser" library="common_functionality">
+<kw name="Append To Environment Variable" library="OperatingSystem">
+<arg>Path</arg>
+<arg>${EXECDIR}${/}driver</arg>
+<doc>Appends given ``values`` to environment variable ``name``.</doc>
+<msg timestamp="20210709 11:39:07.216" level="INFO">Environment variable 'Path' set to value 'C:\Users\chamundeswarik\PycharmProjects\OpeEMRProject\venv\Scripts;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Windows\CCM;C:\Windows\CCM;C:\Program Files (x86)\Sennheiser\SenncomSDK\;C:\Program Files (x86)\Webex\Plugins;C:\Program Files\Git\cmd;D:\Python\Scripts\;D:\Python\;C:\Users\chamundeswarik\AppData\Local\Microsoft\WindowsApps;C:\JavaseleniumbyJitendra\Tools\Java\jdk1.8.0_271\bin;;C:\Users\chamundeswarik\PycharmProjects\OpeEMRProject\driver'.</msg>
+<status status="PASS" starttime="20210709 11:39:07.216" endtime="20210709 11:39:07.216"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>gc=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210709 11:39:07.216" level="INFO">Opening browser 'firefox' to base url 'gc=chrome'.</msg>
+<msg timestamp="20210709 11:39:07.218" level="INFO">Firefox driver log is always forced to to: C:\Users\chamundeswarik\PycharmProjects\OpeEMRProject\geckodriver-4.log</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210709 11:39:07.253" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20210709 11:39:07.253" endtime="20210709 11:39:07.253"/>
+</kw>
+<msg timestamp="20210709 11:39:07.255" level="FAIL">WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</msg>
+<status status="FAIL" starttime="20210709 11:39:07.216" endtime="20210709 11:39:07.255"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20210709 11:39:07.255" endtime="20210709 11:39:07.255"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>30s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="NOT RUN" starttime="20210709 11:39:07.255" endtime="20210709 11:39:07.255"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=https://demo.openemr.io/b/openemr/index.php</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" starttime="20210709 11:39:07.255" endtime="20210709 11:39:07.256"/>
+</kw>
+<status status="FAIL" starttime="20210709 11:39:07.215" endtime="20210709 11:39:07.256"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=authUser</arg>
+<arg>admin</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210709 11:39:07.256" endtime="20210709 11:39:07.256"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id=clearPass</arg>
+<arg>pass</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210709 11:39:07.256" endtime="20210709 11:39:07.256"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>name=languageChoice</arg>
+<arg>English (Indian)</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="NOT RUN" starttime="20210709 11:39:07.257" endtime="20210709 11:39:07.257"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//button[@type='submit</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210709 11:39:07.257" endtime="20210709 11:39:07.257"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath=//div[contains(text(),'Invalid')]</arg>
+<arg>Invalid username or password</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="NOT RUN" starttime="20210709 11:39:07.257" endtime="20210709 11:39:07.257"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Flow Board</arg>
+<arg>50s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20210709 11:39:07.257" endtime="20210709 11:39:07.257"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>OpenEMR</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="NOT RUN" starttime="20210709 11:39:07.258" endtime="20210709 11:39:07.258"/>
+</kw>
+<status status="FAIL" starttime="20210709 11:39:07.215" endtime="20210709 11:39:07.258">WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</status>
+</test>
+<test id="s1-t3" name="TC2">
+<status status="FAIL" starttime="20210709 11:39:07.258" endtime="20210709 11:39:07.259">Test case contains no keywords.</status>
+</test>
+<doc>This suite will handle all the testcase is related to
+the invalid credenatials - OEM - 102</doc>
+<status status="FAIL" starttime="20210709 11:39:07.005" endtime="20210709 11:39:07.259"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="3" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="3" skip="0" id="s1" name="Verify Invalid Credentials Tests">Verify Invalid Credentials Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
